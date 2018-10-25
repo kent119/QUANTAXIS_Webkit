@@ -28,7 +28,7 @@ router.get('*', function (req, res, next) {
 
 
 
-//http://ess16.wisers.com:8888/backtest/info?name=yutiansut
+//http://ess16.wisers.com:11888/backtest/info?name=yutiansut
 router.get('/info', function (req, res, next) {
   console.log('backtest')
   name = req.query.name
@@ -45,7 +45,7 @@ router.get('/info', function (req, res, next) {
 
   })
 });
-//http://ess16.wisers.com:8888/backtest/info?name=yutiansut
+//http://ess16.wisers.com:11888/backtest/info?name=yutiansut
 router.get('/info', function (req, res, next) {
   console.log('backtest')
   name = req.query.strategy

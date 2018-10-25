@@ -90,7 +90,7 @@ export default {
             })
         },
         querybyname(code) {
-            let val = 'http://ess16.wisers.com:8888/monitor/code?name=' + code
+            let val = 'http://ess16.wisers.com:11888/monitor/code?name=' + code
             axios.get(val)
                 .then(response => {
                     this.chart.hideLoading();

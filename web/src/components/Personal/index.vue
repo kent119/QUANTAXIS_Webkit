@@ -72,7 +72,7 @@ export default {
     methods: {
         ready() {
 
-            axios.get('http://ess16.wisers.com:8888/backtest/info?name=' + sessionStorage.user)
+            axios.get('http://ess16.wisers.com:11888/backtest/info?name=' + sessionStorage.user)
                 .then(response => {
                     this.items = response.data;
                     console.log(this.items)
