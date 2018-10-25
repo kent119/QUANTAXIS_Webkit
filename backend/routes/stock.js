@@ -50,7 +50,7 @@ router.get('/history/time', function (req, res, next) {
   var start_stamp = new Date(start).getTime();
   var end_stamp = new Date(end).getTime();
   console.log(code)
-  mongodb.connect('mongodb://localhost:27017/quantaxis', function (err, conn) {
+  mongodb.connect('mongodb://webadmin:wisers@ess17.wisers.com:15000/quantaxis', function (err, conn) {
     conn.collection('stock_day', function (err, coll) {
       coll.find({
         "code": code,

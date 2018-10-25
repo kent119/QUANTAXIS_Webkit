@@ -19,7 +19,7 @@ export default {
   },
   methods: {
     query_positions() {
-      axios.get('http://localhost:8888/positions')
+      axios.get('http://ess16.wisers.com:11888/positions')
         .then(function (response) {
           var data1 = response.data;
           console.log(data1)
@@ -37,22 +37,22 @@ export default {
 }
 /**
  * 查询账号
-GET http://localhost:8888/accounts
+GET http://ess16.wisers.com:11888/accounts
 
 查询资金股份
-GET http://localhost:8888/positions
+GET http://ess16.wisers.com:11888/positions
 
 查询当日委托
-GET http://localhost:8888/orders
+GET http://ess16.wisers.com:11888/orders
 
 查询撤单
-GET http://localhost:8888/orders?status=open
+GET http://ess16.wisers.com:11888/orders?status=open
 
 查询当日成交
-GET http://localhost:8888/orders?status=filled
+GET http://ess16.wisers.com:11888/orders?status=filled
 
 买入
-POST http://localhost:8888/orders
+POST http://ess16.wisers.com:11888/orders
 Content-Type: application/json
 
 {
@@ -88,7 +88,7 @@ amountProportion 可选择：ALL, 1/2, 1/3, 1/4, 1/5
 以上参数设置也适用于"卖出"
 
 卖出
-POST http://localhost:8888/orders
+POST http://ess16.wisers.com:11888/orders
 Content-Type: application/json
 
 {
@@ -101,23 +101,23 @@ Content-Type: application/json
 }
 
 撤单
-DELETE http://localhost:8888/orders/O1234
+DELETE http://ess16.wisers.com:11888/orders/O1234
 （注：上面 URL 中的 O1234 应替换为相应的委托编号）
 
 撤单全部
-DELETE http://localhost:8888/orders
+DELETE http://ess16.wisers.com:11888/orders
 
 查询其他
-GET http://localhost:8888?navigation=查询>当日委托
+GET http://ess16.wisers.com:11888?navigation=查询>当日委托
 
 查询状态
-GET http://localhost:8888/statuses
+GET http://ess16.wisers.com:11888/statuses
 
 启动并自动登录通达信
-PUT http://localhost:8888/clients
+PUT http://ess16.wisers.com:11888/clients
 
 关闭所有通达信
-DELETE http://localhost:8888/clients
+DELETE http://ess16.wisers.com:11888/clients
                 
 */
 </script>

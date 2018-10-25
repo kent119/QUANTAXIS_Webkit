@@ -27,7 +27,7 @@ router.get('/', function (req, res, next) {
 router.get('/history', function (req, res, next) {
   //console.log('backtest')
 
-  mongodb.connect('mongodb://localhost:27017/quantaxis', function (err, conn) {
+  mongodb.connect('mongodb://webadmin:wisers@ess17.wisers.com:15000/quantaxis', function (err, conn) {
     conn.collection('trade_stock', function (err, coll) {
       coll.find().toArray(function (err, docs) {
         res.send(docs)
@@ -41,7 +41,7 @@ router.get('/history', function (req, res, next) {
 router.get('/lastest', function (req, res, next) {
   //console.log('backtest')
 
-  mongodb.connect('mongodb://localhost:27017/quantaxis', function (err, conn) {
+  mongodb.connect('mongodb://webadmin:wisers@ess17.wisers.com:15000/quantaxis', function (err, conn) {
     conn.collection('trade_stock', function (err, coll) {
       coll.find().toArray(function (err, docs) {
         res.send(docs[docs.length - 1])

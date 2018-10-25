@@ -20,7 +20,7 @@ router.get('/queryContentbyName', function (req, res, next) {
         var name = new RegExp(req.query.name); //模糊查询参数
         console.log(name);
     }
-    mongodb.connect('mongodb://localhost:27017/wsc', function (err, conn) {
+    mongodb.connect('mongodb://webadmin:wisers@ess17.wisers.com:15000/wsc', function (err, conn) {
         conn.collection('articles', function (err, coll) {
             coll.find({
                 'content': name
@@ -39,7 +39,7 @@ router.get('/queryTitlebyName', function (req, res, next) {
         var name = new RegExp(req.query.name); //模糊查询参数
         console.log(name);
     }
-    mongodb.connect('mongodb://localhost:27017/wsc', function (err, conn) {
+    mongodb.connect('mongodb://webadmin:wisers@ess17.wisers.com:15000/wsc', function (err, conn) {
         conn.collection('articles', function (err, coll) {
             coll.find({
                 'title': name
@@ -62,7 +62,7 @@ router.get('/queryContentbyTitle', function (req, res, next) {
         var title = new RegExp(req.query.title); //模糊查询参数
         console.log(title);
     }
-    mongodb.connect('mongodb://localhost:27017/wsc', function (err, conn) {
+    mongodb.connect('mongodb://webadmin:wisers@ess17.wisers.com:15000/wsc', function (err, conn) {
         conn.collection('articles', function (err, coll) {
             coll.find({
                 'title': title

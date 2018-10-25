@@ -95,7 +95,7 @@ export default {
   },
   methods: {
     query_positions() {
-      axios.get('http://localhost:5000/trade/query/assets')
+      axios.get('http://webadmin:wisers@ess17.wisers.com:15000/trade/query/assets')
         .then(response => {
           var data = response.data;
           this.cash = data['cash'];

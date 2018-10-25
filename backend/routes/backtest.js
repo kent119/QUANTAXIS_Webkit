@@ -28,12 +28,12 @@ router.get('*', function (req, res, next) {
 
 
 
-//http://localhost:3000/backtest/info?name=yutiansut
+//http://ess16.wisers.com:8888/backtest/info?name=yutiansut
 router.get('/info', function (req, res, next) {
   console.log('backtest')
   name = req.query.name
   console.log(req.query.name)
-  mongodb.connect('mongodb://localhost:27017/quantaxis', function (err, conn) {
+  mongodb.connect('mongodb://webadmin:wisers@ess17.wisers.com:15000/quantaxis', function (err, conn) {
     conn.collection('backtest_info', function (err, coll) {
       coll.find({
         'user': name
@@ -45,12 +45,12 @@ router.get('/info', function (req, res, next) {
 
   })
 });
-//http://localhost:3000/backtest/info?name=yutiansut
+//http://ess16.wisers.com:8888/backtest/info?name=yutiansut
 router.get('/info', function (req, res, next) {
   console.log('backtest')
   name = req.query.strategy
   console.log(req.query.strategy)
-  mongodb.connect('mongodb://localhost:27017/quantaxis', function (err, conn) {
+  mongodb.connect('mongodb://webadmin:wisers@ess17.wisers.com:15000/quantaxis', function (err, conn) {
     conn.collection('backtest_info', function (err, coll) {
       coll.find({
         'strategy': name
@@ -65,7 +65,7 @@ router.get('/info', function (req, res, next) {
 router.get('/info_all', function (req, res, next) {
   console.log('backtest')
 
-  mongodb.connect('mongodb://localhost:27017/quantaxis', function (err, conn) {
+  mongodb.connect('mongodb://webadmin:wisers@ess17.wisers.com:15000/quantaxis', function (err, conn) {
     conn.collection('backtest_info', function (err, coll) {
       coll.find({}).toArray(function (err, docs) {
         res.send(docs)
@@ -80,7 +80,7 @@ router.get('/info_code', function (req, res, next) {
 
   var code = new RegExp(req.query.code);
   console.log(code)
-  mongodb.connect('mongodb://localhost:27017/quantaxis', function (err, conn) {
+  mongodb.connect('mongodb://webadmin:wisers@ess17.wisers.com:15000/quantaxis', function (err, conn) {
     conn.collection('backtest_info', function (err, coll) {
       coll.find({
         'stock_list': code
@@ -98,7 +98,7 @@ router.get('/info_cookie', function (req, res, next) {
   console.log('backtest')
   cookie = req.query.cookie
   console.log(req.query.cookie)
-  mongodb.connect('mongodb://localhost:27017/quantaxis', function (err, conn) {
+  mongodb.connect('mongodb://webadmin:wisers@ess17.wisers.com:15000/quantaxis', function (err, conn) {
     conn.collection('backtest_info', function (err, coll) {
       coll.find({
         'account_cookie': cookie
@@ -116,7 +116,7 @@ router.get('/history', function (req, res, next) {
 
   cookie = req.query.cookie
   console.log(cookie)
-  mongodb.connect('mongodb://localhost:27017/quantaxis', function (err, conn) {
+  mongodb.connect('mongodb://webadmin:wisers@ess17.wisers.com:15000/quantaxis', function (err, conn) {
     conn.collection('backtest_history', function (err, coll) {
       coll.find({
         'cookie': cookie
