@@ -2,7 +2,7 @@
   <div id="sign">
     <div id="title">
       <h1>#USER</h1>
-      <h2>Welcome to QUANTAXIS</h2>
+      <h2>Welcome to WisersQuant</h2>
     </div>
     <div id='textbox'>
       <div>

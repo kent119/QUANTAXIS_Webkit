@@ -1,6 +1,6 @@
 <template>
     <div id="title">
-        <h1>#QUANTAXIS</h1>
+        <h1>#WisersQuant</h1>
         <h2>Intergrated Quantitative System | WebKit Visualization Soulution</h2>
     </div>
 </template>
