@@ -2,7 +2,7 @@
     <div class="demo-step-container">
         <div id="title">
             <h1>#Start</h1>
-            <h2>Only Three Steps,Start your WisersQuant</h2>
+            <h2>Only Three Steps,Start your Quant Demo</h2>
         </div>
         <div id="content">
             <mu-stepper :activeStep="activeStep" orientation="vertical">
